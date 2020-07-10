@@ -124,6 +124,11 @@ typedef enum {
      * @brief Decoder hits the recursion limit
      */
     NANOCBOR_ERR_RECURSION = -4,
+
+    /**
+     * @brief Decoder hits an invalid tag
+     */
+    NANOCBOR_ERR_INVALID_TAG = -5,
 } nanocbor_error_t;
 
 
@@ -226,6 +231,28 @@ int nanocbor_get_uint32(nanocbor_value_t *cvalue, uint32_t *value);
  * @return              negative on error
  */
 int nanocbor_get_int32(nanocbor_value_t *cvalue, int32_t *value);
+
+/**
+ * @brief Retrieve a float value from the stream
+ *
+ * @param[in]   cvalue  CBOR value to decode from
+ * @param[out]  value   returned float
+ *
+ * @return              number of bytes read
+ * @return              negative on error
+ */
+int nanocbor_get_float(nanocbor_value_t *cvalue, float *num);
+
+/**
+ * @brief Retrieve a double floating point from the stream
+ *
+ * @param[in]   cvalue  CBOR value to decode from
+ * @param[out]  value   returned double
+ *
+ * @return              number of bytes read
+ * @return              negative on error
+ */
+int nanocbor_get_double(nanocbor_value_t *cvalue, double *num);
 
 /**
  * @brief Retrieve a byte string from the stream
