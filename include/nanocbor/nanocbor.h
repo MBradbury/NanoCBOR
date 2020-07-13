@@ -96,6 +96,14 @@ extern "C" {
 /** @} */
 
 /**
+ * @name CBOR data sizes
+ * @{
+ */
+#define NANOCBOR_MIN_TINY_INTEGER     0 /**< Minimum value in a tiny integer */
+#define NANOCBOR_MAX_TINY_INTEGER    23 /**< Maximum value in a tiny integer */
+/** @} */
+
+/**
  * @brief NanoCBOR decoder errors
  */
 typedef enum {
