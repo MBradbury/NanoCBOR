@@ -283,9 +283,9 @@ int nanocbor_get_bstr(nanocbor_value_t *cvalue, const uint8_t **buf, size_t *len
     return _get_str(cvalue, buf, len, NANOCBOR_TYPE_BSTR);
 }
 
-int nanocbor_get_tstr(nanocbor_value_t *cvalue, const uint8_t **buf, size_t *len)
+int nanocbor_get_tstr(nanocbor_value_t *cvalue, const char **buf, size_t *len)
 {
-    return _get_str(cvalue, buf, len, NANOCBOR_TYPE_TSTR);
+    return _get_str(cvalue, (const uint8_t **)buf, len, NANOCBOR_TYPE_TSTR);
 }
 
 int nanocbor_get_null(nanocbor_value_t *cvalue)

@@ -290,7 +290,7 @@ int nanocbor_get_bstr(nanocbor_value_t *cvalue, const uint8_t **buf, size_t *len
  * @return              number of bytes read
  * @return              negative on error
  */
-int nanocbor_get_tstr(nanocbor_value_t *cvalue, const uint8_t **buf, size_t *len);
+int nanocbor_get_tstr(nanocbor_value_t *cvalue, const char **buf, size_t *len);
 
 /**
  * @brief Enter a array type
