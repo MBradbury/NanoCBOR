@@ -137,6 +137,16 @@ typedef enum {
      * @brief Decoder hits an invalid tag
      */
     NANOCBOR_ERR_INVALID_TAG = -5,
+
+    /**
+     * @brief Data is smaller than expected
+     */
+    NANOCBOR_ERR_TOO_SMALL = -6,
+
+    /**
+     * @brief Generic unknown error
+     */
+    NANOCBOR_ERR_UNKNOWN = -7,
 } nanocbor_error_t;
 
 
