@@ -284,6 +284,7 @@ int nanocbor_get_double(nanocbor_value_t *cvalue, double *num)
         }
     }
     return _advance_if(cvalue, res);
+}
 
 int nanocbor_get_int8(nanocbor_value_t *cvalue, int8_t *value)
 {
